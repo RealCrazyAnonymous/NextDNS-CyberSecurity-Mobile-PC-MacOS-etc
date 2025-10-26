@@ -1,10 +1,10 @@
 systemd-resolved
 Use the following in /etc/systemd/resolved.conf:
 [Resolve]
-DNS=45.90.28.0#3aec68.dns.nextdns.io
-DNS=2a07:a8c0::#3aec68.dns.nextdns.io
-DNS=45.90.30.0#3aec68.dns.nextdns.io
-DNS=2a07:a8c1::#3aec68.dns.nextdns.io
+DNS=45.90.28.0#d8dc7c.dns.nextdns.io
+DNS=2a07:a8c0::#d8dc7c.dns.nextdns.io
+DNS=45.90.30.0#d8dc7c.dns.nextdns.io
+DNS=2a07:a8c1::#d8dc7c.dns.nextdns.io
 DNSOverTLS=yes
 
 OR
@@ -20,13 +20,12 @@ OR
 IPv6
 
 Your network supports IPv6
-Change your DNS servers to 2a07:a8c0::3a:ec68 and 2a07:a8c1::3a:ec68.
-
+Change your DNS servers to 2a07:a8c0::d8:dc7c and 2a07:a8c1::d8:dc7c.
 OR
 
 IPv4 (with Linked IP)
 
-Change your DNS servers to 45.90.28.166 and 45.90.30.166.
+Change your DNS servers to 45.90.28.72 and 45.90.30.72 .
 
 OR
 
@@ -40,43 +39,42 @@ server=2a07:a8c1::
 server=45.90.30.0
 server=2a07:a8c0::
 server=45.90.28.0
-add-cpe-id=3aec68
+add-cpe-id=d8dc7c
 
 OR
 
 Stubby
-Use the following in stubby.yml:
 round_robin_upstreams: 1
 upstream_recursive_servers:
   - address_data: 45.90.28.0
-    tls_auth_name: "3aec68.dns.nextdns.io"
+    tls_auth_name: "d8dc7c.dns.nextdns.io"
   - address_data: 2a07:a8c0::0
-    tls_auth_name: "3aec68.dns.nextdns.io"
+    tls_auth_name: "d8dc7c.dns.nextdns.io"
   - address_data: 45.90.30.0
-    tls_auth_name: "3aec68.dns.nextdns.io"
+    tls_auth_name: "d8dc7c.dns.nextdns.io"
   - address_data: 2a07:a8c1::0
-    tls_auth_name: "3aec68.dns.nextdns.io"
+    tls_auth_name: "d8dc7c.dns.nextdns.io"
+
 Make sure Stubby is linked with OpenSSL 1.1.1 or higher as previous versions will not work with NextDNS.
 
 OR
 
 DNSCrypt
 Use the following in dnscrypt-proxy.toml:
-server_names = ['NextDNS-3aec68']
+server_names = ['NextDNS-d8dc7c']
 
 [static]
-  [static.'NextDNS-3aec68']
-  stamp = 'sdns://AgEAAAAAAAAAAAAOZG5zLm5leHRkbnMuaW8HLzNhZWM2OA'
-
+  [static.'NextDNS-d8dc7c']
+  stamp = 'sdns://AgEAAAAAAAAAAAAOZG5zLm5leHRkbnMuaW8HL2Q4ZGM3Yw'
 OR
 
 Knot Resolver
 Use the following in /etc/kresd/custom.conf:
 policy.add(policy.all(policy.TLS_FORWARD({
-  {'45.90.28.0', hostname='3aec68.dns.nextdns.io'},
-  {'2a07:a8c0::', hostname='3aec68.dns.nextdns.io'},
-  {'45.90.30.0', hostname='3aec68.dns.nextdns.io'},
-  {'2a07:a8c1::', hostname='3aec68.dns.nextdns.io'}
+  {'45.90.28.0', hostname='d8dc7c.dns.nextdns.io'},
+  {'2a07:a8c0::', hostname='d8dc7c.dns.nextdns.io'},
+  {'45.90.30.0', hostname='d8dc7c.dns.nextdns.io'},
+  {'2a07:a8c1::', hostname='d8dc7c.dns.nextdns.io'}
 })))
 
 OR
@@ -85,8 +83,7 @@ cloudflared
 Use the following in /usr/local/etc/cloudflared/config.yml:
 proxy-dns: true
 proxy-dns-upstream:
- - https://dns.nextdns.io/3aec68
-
+ - https://dns.nextdns.io/d8dc7c
 OR
 
 Unbound
@@ -94,8 +91,8 @@ Use the following in unbound.conf:
 forward-zone:
   name: "."
   forward-tls-upstream: yes
-  forward-addr: 45.90.28.0#3aec68.dns.nextdns.io
-  forward-addr: 2a07:a8c0::#3aec68.dns.nextdns.io
-  forward-addr: 45.90.30.0#3aec68.dns.nextdns.io
-  forward-addr: 2a07:a8c1::#3aec68.dns.nextdns.io
+  forward-addr: 45.90.28.0#d8dc7c.dns.nextdns.io
+  forward-addr: 2a07:a8c0::#d8dc7c.dns.nextdns.io
+  forward-addr: 45.90.30.0#d8dc7c.dns.nextdns.io
+  forward-addr: 2a07:a8c1::#d8dc7c.dns.nextdns.io
 As a recursive resolver, Unbound chases CNAMEs. This may result in unexpected behavior when used in conjunction with a blocking DNS resolver like NextDNS. See github.com/NLnetLabs/unbound/issues/132.
