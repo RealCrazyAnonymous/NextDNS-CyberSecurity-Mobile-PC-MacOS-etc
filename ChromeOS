@@ -5,16 +5,16 @@ Secure DNS
 Open the Settings app.
 Go to Security and Privacy.
 Enable Use secure DNS.
-Select With: Custom, then enter https://dns.nextdns.io/3aec68.
+Select With: Custom, then enter https://dns.nextdns.io/d8dc7c.
 
 OR
 
 IPv6
 
 Your network supports IPv6
-Change your DNS servers to 2a07:a8c0::3a:ec68 and 2a07:a8c1::3a:ec68.
+Change your DNS servers to 2a07:a8c0::d8:dc7c and 2a07:a8c1::d8:dc7c.
 
 OR
 
 IPv4 (with Linked IP)
-Change your DNS servers to 45.90.28.166 and 45.90.30.166.
+Change your DNS servers to 45.90.28.72 and 45.90.30.72.
