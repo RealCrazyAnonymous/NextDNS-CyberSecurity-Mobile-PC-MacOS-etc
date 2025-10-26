@@ -10,3 +10,48 @@ Enable IPv4.
 Enter 45.90.28.0 as Preferred DNS, then select On (manual template) and enter https://dns.nextdns.io/d8dc7c.
 Enter 45.90.30.0 as Alternate DNS, then select On (manual template) and enter https://dns.nextdns.io/d8dc7c.
 Click Save.
+
+OR
+
+NextDNS for Windows
+1. Download the installer (https://nextdns.io/download/windows/stable).
+2. After installing, right-click on NextDNS icon in the Systray then open the Settings. Set d8dc7c as Configuration ID.
+3. Right-click on NextDNS icon in the Systray, then click on Enable.
+
+OR
+
+IPv6
+
+Your network supports IPv6
+1. Click on the Start menu, then click on Control Panel.
+2. Click on Network and Internet, then Network and Sharing Center.
+3. Click on Change Adapter Settings.
+4. Right click on the Wi-Fi network you are connected to, then click Properties.
+5. Select Internet Protocol Version 6.
+6. Click Properties.
+7. Click Use The Following DNS Server Addresses.
+8. Replace the current addresses (if any) with 2a07:a8c0::d8:dc7c and 2a07:a8c1::d8:dc7c.
+9. Click OK, then Close. You may need to restart your browser.
+
+OR
+
+IPv4 (with Linked IP)
+
+1. Click on the Start menu, then click on Control Panel.
+2. Click on Network and Internet, then Network and Sharing Center.
+3. Click on Change Adapter Settings.
+4. Right click on the Wi-Fi network you are connected to, then click Properties.
+5. Select Internet Protocol Version 4.
+6. Click Properties.
+7. Click Use The Following DNS Server Addresses.
+8. Replace the current addresses (if any) with 45.90.28.72 and 45.90.30.72.
+9. Click OK, then Close. You may need to restart your browser.
+
+OR
+
+ADVANCED USERS ONLY BELOW
+
+YogaDNS
+
+1. Install YogaDNS from https://yogadns.com.
+2. Follow the instructions for NextDNS at https://yogadns.com/docs/nextdns and use d8dc7c as Configuration ID.
