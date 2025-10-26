@@ -8,6 +8,6 @@ Access Private DNS Settings: Tap on "Private DNS." If you don't see this option 
 
 Choose Private DNS Mode: You will see three options: Off: Disables DNS over TLS. Automatic: Uses encrypted DNS when available. Private DNS Provider Hostname: Allows you to specify a hostname for a private DNS provider.
 
-Enter Private DNS Hostname: If you choose "Private DNS Provider Hostname," enter the hostname of a private DNS provider. For example: NextDNS: 3aec68.dns.nextdns.io -- This is our DNS please use.
+Enter Private DNS Hostname: If you choose "Private DNS Provider Hostname," enter the hostname of a private DNS provider. For example: NextDNS: d8dc7c.dns.nextdns.io -- This is our DNS please use.
 
 Save Changes: Tap on "Save" to apply the changes.
