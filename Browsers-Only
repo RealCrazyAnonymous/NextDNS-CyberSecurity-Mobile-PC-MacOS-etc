@@ -1,0 +1,31 @@
+Google Chrome
+
+1. Go to Settings.
+2. In the Privacy and security section, click on Security.
+3. In the Advanced section, enable Use secure DNS.
+4. Select With: Custom, then enter https://dns.nextdns.io/3aec68.
+
+Firefox
+
+Windows, macOS and Linux only
+
+1. Open Preferences.
+2. Click Privacy & Security.
+3. Scroll down to Enable DNS over HTTPS.
+4. Choose Increased Protection or Max Protection.
+5. Select Custom in the menu.
+6. Enter https://dns.nextdns.io/3aec68.
+
+Microsoft Edge
+
+1. Open Settings.
+2. Go to the Privacy, search, and services section.
+3. Under Security, enable Use secure DNS to specify how to lookup the network address for websites.
+4. Select Choose a service provider, then enter https://dns.nextdns.io/3aec68.
+
+Brave
+
+1. Open Settings.
+2. In the Privacy and security section (under Additional settings), go to Security.
+3. In the Advanced section, enable Use secure DNS.
+4. Select With: Custom, then enter https://dns.nextdns.io/3aec68.
